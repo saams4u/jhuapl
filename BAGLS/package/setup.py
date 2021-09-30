@@ -27,7 +27,7 @@ def remove_requirements(requirements, remove_elem):
     return new_requirements
 
 version = None
-with open('deep_tumour_spheroid/__init__.py', 'r', encoding='utf-8') as f:
+with open('bagls/__init__.py', 'r', encoding='utf-8') as f:
 
     version = f.readline().split('=')[-1].strip().replace('"','')
 
@@ -78,7 +78,7 @@ setup(
     # There are some restrictions on what makes a valid project name
     # specification here:
     # https://packaging.python.org/specifications/core-metadata/#name
-    name='Deep-Tumour-Spheroid',  # Required
+    name='Benchmark-for-Automatic-Glottis-Segmentation',  # Required
 
     # Versions should comply with PEP 440:
     # https://www.python.org/dev/peps/pep-0440/
@@ -91,7 +91,7 @@ setup(
     # This is a one-line description or tagline of what your project does. This
     # corresponds to the "Summary" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#summary
-    description='Deep Learning methods for the segmentation of Tumour Spheroids',  # Required
+    description='This package contains several commands and utilities to easily use semantic segmentation models for automatic glottis segmentation.',  # Required
 
     # This is an optional longer description of your project that represents
     # the body of text which users will see when they visit PyPI.
@@ -108,18 +108,18 @@ setup(
     #
     # This field corresponds to the "Home-Page" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#home-page-optional
-    url='https://github.com/WaterKnight1998/Deep-Tumour-Spheroid',  # Optional
+    url='https://github.com/saams4u/jhuapl',  # Optional
 
     # This should be your name or the name of the organization which owns the
     # project.
-    author='David Lacalle Castillo',  # Optional
+    author='Saamahn Mahjouri',  # Optional
 
     # This should be a valid email address corresponding to the author listed
     # above.
-    author_email='dvdlacallecastillo@gmail.com',  # Optional
+    author_email='mahjouri.saamahn@gmail.com',  # Optional
 
-    maintainer='David Lacalle Castillo',
-    maintainer_email='dvdlacallecastillo@gmail.com',
+    maintainer='Saamahn Mahjouri',
+    maintainer_email='mahjouri.saamahn@gmail.com',
 
     license="GNU General Public License v3 (GPLv3)",
     # Classifiers help users find your project by categorizing it.
@@ -160,7 +160,7 @@ setup(
     # project page. What does your project relate to?
     #
     # Note that this is a string of words separated by whitespace, not a list.
-    keywords='gbm brain tumour spheroid spheroids deep learning semantic segmentation pytorch',  # Optional
+    keywords='automatic glottis deep learning semantic segmentation pytorch',  # Optional
 
     # You can just specify package directories manually here if your project is
     # simple. Or you can use find_packages().
@@ -215,9 +215,8 @@ setup(
     # executes the function `main` from this package when invoked:
     entry_points={  # Optional
         'console_scripts': [
-            'deep-tumour-spheroid=deep_tumour_spheroid.cli:main',
-            'deep-tumour=deep_tumour_spheroid.cli:main',
-            'dts=deep_tumour_spheroid.cli:main',
+            'benchmark-for-automatic-glottis-segmentation=benchmark-for-automatic-glottis-segmentation.cli:main',
+            'bagls=benchmark-for-automatic-glottis-segmentation.cli:main',
         ],
     }
 )

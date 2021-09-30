@@ -92,7 +92,7 @@ def roi_to_mask(input_roi_file, output_dir, output_type="png"):
     '''
 
     roi_name = os.path.basename(input_roi_file).replace(".roi", "")
-    print("Ruta: {} Imagen: {}".format(input_roi_file, roi_name))
+    print("Route: {} Image: {}".format(input_roi_file, roi_name))
     roi = []
 
     if input_roi_file.endswith(".roi"):
@@ -249,15 +249,15 @@ def generate_test_set(input_dir, dataset_name, output_dir, output_type="png", p_
     # It delete the same files in Manual Dataset
     deleted_elems_1 = deleted_elems.copy()
     for i in range(0,len(deleted_elems_1),1):
-        deleted_elems_1[i] = deleted_elems_1[i].replace(dataset_realname,"manual")
+        deleted_elems_1[i] = deleted_elems_1[i].replace(dataset_realname, "training")
 
     delete_files_in_folder(deleted_elems_1,output_type)
 
     # It delete the same files in Manual+EsferoidesJ Dataset
-    deleted_elems_2 = deleted_elems.copy()
-    for i in range(0,len(deleted_elems_2),1):
-        deleted_elems_2[i] = deleted_elems_2[i].replace(dataset_realname,"manual + EsferoidesJ")
-    delete_files_in_folder(deleted_elems_2,output_type)
+    # deleted_elems_2 = deleted_elems.copy()
+    # for i in range(0,len(deleted_elems_2),1):
+    #     deleted_elems_2[i] = deleted_elems_2[i].replace(dataset_realname,"manual + EsferoidesJ")
+    # delete_files_in_folder(deleted_elems_2,output_type)
 
 
 def delete_files_in_folder(mask_files_list,output_type):

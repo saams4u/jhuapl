@@ -169,7 +169,7 @@ def show_gui():
     app = QApplication([])
 
     window = QWidget()
-    window.setWindowTitle("Benchmark-for-Automatic-Glottis-Segmentation-(BAGLS)")
+    window.setWindowTitle("Benchmark-for-Automatic-Glottis-Segmentation")
     tabs = QTabWidget()
 
     outputType="png"
