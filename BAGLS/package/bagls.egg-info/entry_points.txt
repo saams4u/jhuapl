@@ -1,0 +1,5 @@
+[console_scripts]
+bagls = bagls.cli:main
+benchmark-for-automatic-glottis-segmentation = bagls.cli:main
+glottis-segmentation = bagls.cli:main
+
